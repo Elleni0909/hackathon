@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <link href="style.css" rel="stylesheet">
+        <title>You Can Learn Anything</title>
+    </head>
+    <body>
+        <div id="first-page" style="height:800px">
+        <div class="inner-box">
+          <form>
+          <h3><font color="white">I want to learn </font><input type="text" name="iwanttolearn">
+          <a href="#learn" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-ok"></span>
+          </a></h3><p align="right" style="width: 440px;">how to juggle, algebra, art history, acting...</p><br>
+          </form>
+        </div>
+      </div>
+        <div class="inner-box" id="learn" style="height:800px;">
+          <h2 align="center" style="margin-top: 80px;">Now think of a time when you've mastered something</h2>
+          <h3 align="left">I know I can learn how to dance because in the past I couldn't <input type="text" name="icouldnt"></h3>
+          <p align="right" style="width: 940px;margin-bottom: 0px;">(ride a bike, do long division, swim)</p>
+          <h3 align="left" style="margin-top: 0px;">But with effort & practice now I can!</h3>
+          <h2 align="left">I can learn anything <a href="#letter" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-thumbs-up"></span>
+          </a></h2>
+        </div>
+        <div class="inner-box" id="letter" style="height:800px;">
+          <h2 align="center" style="margin-top: 80px;">Now think of a time when you've mastered something</h2>
+          <h2 align="left">I can learn anything <a href="#letter" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-send"></span>
+          </a></h2>
+
+          <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+    <script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+
+   	</body>
+</html>
